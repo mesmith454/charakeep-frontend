@@ -1,0 +1,43 @@
+div {
+    border-style: solid;
+    border-color: black;
+    border-width: .5px;
+    margin: auto;
+    padding: 2px;
+
+    display: flex;
+}
+
+#buttolog {
+    height: 25px;
+}
+
+#actions {
+    /* align: center; */
+}
+
+#deets {
+    height: 380px;
+  
+}
+
+img {
+    height: 350px;
+    width: 350px;
+}
+
+#basics {
+    
+    width: 150px;
+    flex-direction: column;
+}
+
+#stats {
+    width: 150px;
+    flex-direction: column;
+}
+
+#dice {
+    height: 150px;
+    flex-direction: column; 
+}

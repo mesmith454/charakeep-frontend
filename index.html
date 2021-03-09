@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
@@ -6,43 +6,110 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="assets/index.css">
     </head>
     <body>
-       <div id = "titlelog"> 
+       <div id = "titlelog">
             <h1> CharaKeep</h1>
-            <button>Login</button>
+            <!-- if logged in 
+                <h4> Welcome, <%= #{@user.name} <h4> 
+                else 
+                <h4> Welcome! </h4> -->
+            <button id = "buttolog" >Login</button>
 
        </div>
        
        <div id = "actions">
-        <button> Add </button>
-        <button> Edit </button>
-        <button> Delete </button>
+            <button id = "add"> Add </button>
+            <button id = "edit"> Edit </button>
+            <button id = "delete"> Delete </button>
        </div>
        
        <div id = "deets">
-            <div id = "pic"> </div> 
+            <div>
+                <img id = "profile" src = ""      alt="character profile picture"> 
+            </div> 
             <div id = "basics">
-                <!-- -name dropdown
-                -level
-                -race  -->
+                <div>
+                    <p>Name</p> 
+                </div>
+                <div>
+                    <p>Race</p>
+                </div>             
+                <div>
+                    <p>Class</p>
+                </div>
+                <div>
+                    <p>Level</p>
+                </div>
             </div>
-            <div id = "stats"> </div>
-            <div id = "dice"> </div> 
-        -->
+
+            <div id = "stats">
+                <div>
+                    <p>AGI:</p>
+                </div>  
+                <div>
+                    <p>CHA:</p>
+                </div>
+                <div>
+                    <p>DEX:</p>
+                </div>
+                <div>
+                    <p>INT:</p>
+                </div>
+                <div>
+                    <p>STR:</p>
+                </div>
+                <div>
+                    <p>WIS:</p>
+                </div>  
+            </div>
+
+            <div id = "dice">
+                <div>
+                    <p>D4:</p>
+                </div>
+                <div>
+                    <p>D6:</p>  
+                </div>
+                <div>
+                    <p>D8:</p>
+                </div>  
+                <div>
+                    <p>D10:</p>  
+                </div>
+                <div>
+                    <p>D12:</p>  
+                </div>
+                <div>
+                    <p>D20:</p>  
+                </div>
+                <div>
+                    <p>D00:</p>
+                </div>  
+            </div> 
+        
        </div>
 
        <div id = "legend">
-           <div id = "history"> </div>
+           <div id = "history">
+                <h4>History</h4>
+                <p>
+                    <!-- content here -->
+                </p>
+
+            </div>
            <div id = "achieve">
+               <h4> Achievements</h4>
                <ul>
                </ul>
+               <textfield></textfield>
+               <button>Add</button>
            </div>
        </div>
 
        
         
-        <script src="" async defer></script>
+        <script src="/src/index.js" async defer></script>
     </body>
 </html>
