@@ -10,12 +10,28 @@
     const buttchieve = document.querySelector("#buttchieve")
 
 //stand alone functions
-  //login function - logbutton accepts a name and loads an existing user and their characters OR 
-  //create new user-creates a user and renders a create character sheet > add button in this case should 
+ 
+  function login(string){
+    //if User.all.includes?(string)
+        //render json: user's 1st character
+    //else creates a user and renders a create character sheet
+  }
+  
+  function addchar() {
+    //add - toggle view to new character form populated with labels> add button now reads save 
+  }
 
-  //add character - toggle view to new character form populated with labels> add button now reads save 
+  function save() {
   //save character - record to database and render saved character information 
+  }
 
+  function edit(character) { 
+    //load form view and populate fields with character info
+  }
+
+  function update(character) {
+
+  }
   //edit character - toggle to edit rendered view to form populated with char's info > button text to update
   //update character - record info over existing info for current character to database
 

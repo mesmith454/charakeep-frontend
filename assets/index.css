@@ -13,24 +13,29 @@ div {
 }
 
 #actions {
-    /* align: center; */
+    flex-wrap: wrap;  
 }
+
 
 #deets {
     height: 380px;
-  
+   
 }
 
 img {
-    height: 350px;
-    width: 350px;
+    height: 300px;
+    width: 300px;
+   
 }
 
 #basics {
     
     width: 150px;
     flex-direction: column;
+    flex-wrap: wrap;
 }
+
+
 
 #stats {
     width: 150px;
@@ -38,6 +43,16 @@ img {
 }
 
 #dice {
-    height: 150px;
-    flex-direction: column; 
+    height: 250px;
+    flex-wrap: wrap;
+}
+
+#col1 {
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#col2 {
+    flex-direction: column;
+    flex-wrap: wrap;
 }
