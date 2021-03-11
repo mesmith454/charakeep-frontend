@@ -16,7 +16,7 @@
                 <h4> Welcome, <%= #{@user.name} <h4> 
                 else 
                 <h4> Welcome! </h4> -->
-            <button id = "buttolog"> Login   
+            <button id = "logbtn"> Login   
             </button>
        </div>
        
@@ -28,7 +28,7 @@
    
        <div id = "deets">
             <div>
-                <img id = "profile" src = "<%= #{@Character.img %>"      alt="character profile picture"> 
+                <img id = "profile" src = "<%= #{@Character.image %>" alt="character profile picture"> 
             </div> 
             <div id = "basics">
                 <div>
@@ -43,7 +43,7 @@
                 </div>             
                 <div>
                     <p>
-                        <%= #{@Character.dndclass}%>
+                        <%= #{@Character.dndclass} %>
                     </p>
                 </div>
                 <div>
@@ -112,13 +112,18 @@
                 </p>
             </div>
 
-           <div id = "achieve">
+           <div id = "achievetab">
                <h4> Achievements</h4>
+               <br>
                <ul>
                    <li>No achievements...</li>
                </ul>
-               <textfield></textfield>
-               <button id = "buttchieve" >Add</button>
+               <form id = "addachform" action = "">
+                <input type='text' name="achieve" id="achieve" cols="30" rows="1">
+                </br>
+                <button id='addach'>Add</button>
+
+               </form>
            </div>
        </div>
 
