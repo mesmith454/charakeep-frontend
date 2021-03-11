@@ -8,6 +8,7 @@
     const image = document.querySelector("#profile")
     const buttchieve = document.querySelector("#buttchieve")
     conts 
+    const achul = document.querySelector("achul")
 
     let li = document.createElement(li)
 
@@ -52,7 +53,7 @@
   //die rolls - each die will need a function to:
 
   function rolldie(dnumber, amount){
-    //take into acount die range
+    if dnumber 
     //take in amount of dice to be rolled (we'll say max 10 each)
     //clicking = will calculate result
     //interpolate die number to keep it dry
@@ -62,12 +63,12 @@
 
 //event listeners
 
-form.addEventListener('submit', e => {
+addachform.addEventListener('submit', e => {
   e.preventDefault()
   let input = e.target[0].value
   let li = document.createElement('li')
   li.innerText = input
-  ul.appendChild(li)
+  achul.appendChild(li)
 
   input.innerText = ''
 });
