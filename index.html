@@ -12,12 +12,12 @@
 
        <div id = "titlelog">
             <h1> CharaKeep</h1>
-            <!-- if logged in 
-                <h4> Welcome, <%= #{@user.name} <h4> 
-                else 
-                <h4> Welcome! </h4> -->
-            <button id = "logbtn"> Login   
-            </button>
+            <form id = "login" action = "">
+                <input type='text' name="login" id="usern" cols="30" rows="10" placeholder="Username">
+                </br>
+                <button id='logbtn'>Login</button>
+           </form>  
+           
        </div>
        
        <div id = "actions">
@@ -28,92 +28,112 @@
    
        <div id = "deets">
             <div>
-                <img id = "profile" src = "<%= #{@Character.image %>" alt="character profile picture"> 
+                <img id = "profile" src = ""
+                alt="character profile picture"> 
             </div> 
             <div id = "basics">
-                <div>
+                <div id="cname">
                     <p>
-                        <form id = "charnameform" action = "">
-                            <input type='text' name="charname" id="charname" cols="30" rows="1" placeholder="Name">
-                            </br>
-                            <button id='addname'>Add</button>
-                       </form>  
+                       Name 
                     </p> 
                 </div>
-                <div>
+                <div id = "rname">
                     <p> 
-                        <form id = "selectrace" action = "">
-                            <select id = "race" name="Races" placeholder = "Races">
-                                <!-- interpolate races -->
-                            </select>
-                       </form>  
+                        Race
                     </p>
                 </div>             
-                <div>
+                <div id = "clname">
                     <p>
-                        <form id = "selectclass" action = "">
-                            <select id = "dndclass" name="dndclasses" placeholder= "Classes">
-                                <!-- interpolate races -->
-                            </select>
-                        </form>
+                        Class
                     </p>
                 </div>
-                <div>
+                <div id = "clvl">
                     <p> 
-                        <form id = "setlvlform" action = "">
-                            <input type="number" id = "setlvl" min = "1" max = "100" placeholder="Level">
-                              
-                            </select>
+                    Level
                     </p>
                 </div>
             </div>
 
             <div id = "stats">
                 <div>
-                    <p>AGI: <%= #{@Character.stat[0]} %></p>
+                    <p>AGI:</p><p id = "agi">0</p>
                 </div>  
                 <div>
-                    <p>CHA:  <%= #{@Character.stat[1]} %></p>
+                    <p>CHA:</p><p id = "cha">0</p>
                 </div>
                 <div>
-                    <p>DEX: <%= #{@Character.stat[2]} %></p>
+                    <p>DEX:</p><p id = "dex">0</p>
                 </div>
                 <div>
-                    <p>INT: <%= #{@Character.stat[3]} %></p>
+                    <p>INT:</p><p id = "int">0</p>
                 </div>
                 <div>
-                    <p>STR: <%= #{@Character.stat[4]} %> </p>
+                    <p>STR:</p><p id = "str">0</p>
                 </div>
                 <div>
-                    <p>WIS:  <%= #{@Character.stat[5]} %></p>
+                    <p>WIS:</p><p id = "wis">0</p>
                 </div>  
             </div>
 
             <div id = "dice">
                 <div id = "col1">
                     <div>
-                        <p>D4:</p><p>x</p><p>=</p>
+                        <p>D4 x</p> 
+                            <form id = "d4roller" action = "">
+                            <input type="number" id = "d4rolln" min = "0" max = "100"> 
+                            </form> 
+                       <button id = "d4eq"> = </button>
+                       <br><p>0</p>
                     </div>
                     <div>
-                        <p>D6:</p><p>x</p><p>=</p>
+                        <p>D6 x</p>
+                        <form id = "d6roller" action = "">
+                            <input type="number" id = "d6rolln" min = "0" max = "100"> 
+                            </form> 
+                       <button id = "d6eq"> = </button>
+                        <br><p>0</p>
                     </div>
                     <div>
-                        <p>D8:</p><p>x</p><p>=</p>
+                        <p>D8 x</p>
+                        <form id = "d8roller" action = "">
+                            <input type="number" id = "d8rolln" min = "0" max = "100"> 
+                            </form> 
+                       <button id = "d8eq"> = </button>
+                        <br><p>0</p>
                     </div>  
                     <div>
-                        <p>D10:</p><p>x</p><p>=</p>
+                        <p>D10 x</p>
+                        <form id = "d10roller" action = "">
+                            <input type="number" id = "d10rolln" min = "0" max = "100"> 
+                            </form> 
+                       <button id = "d10eq"> = </button>
+                        <br><p>0</p>
                     </div>
-                    
                 </div>
                 <div id ="col2">
                     <div>
-                        <p>D12:</p><p>x</p><p>=</p> 
+                        <p>D12 x</p>
+                        <form id = "d12roller" action = "">
+                            <input type="number" id = "d12rolln" min = "0" max = "100"> 
+                            </form> 
+                       <button id = "d12eq"> = </button>
+                        <br><p>0</p>
                     </div>
                     <div>
-                        <p>D20:</p><p>x</p><p>=</p>
+                        <p>D20 x</p>
+                        <form id = "d20roller" action = "">
+                            <input type="number" id = "d20rolln" min = "0" max = "100"> 
+                            </form> 
+                       <button id = "d20eq"> = </button>
+                        <br><p>0</p>
                     </div>
                     <div>
-                        <p>D00:</p><p>x</p><p>=</p>
+                        <p>D00 x</p>
+                        <form id = "d00roller" action = "">
+                            <input type="number" id = "d00rolln" min = "0" max = "100"> 
+                            </form> 
+                       <button id = "d00eq"> = </button>    
+                        <br><p>0</p>
                     </div>  
                 </div>
             </div> 
@@ -122,13 +142,7 @@
        <div id = "legend">
            <div id = "histtab">
                 <h4>History</h4>
-                <p>
-                    <form id = "addhistform" action = "">
-                        <input type='text' name="history" id="history" cols="30" rows="10">
-                        </br>
-                        <button id='addhist'>Add</button>
-                   </form>  
-                </p>
+                    <p>Lorem ipsum </p>
             </div>
 
            <div id = "achievetab">
@@ -148,6 +162,6 @@
 
    
         
-        <script src="/src/index.js" async defer></script>
+        <script src="./src/index.js" defer></script>
     </body>
 </html>
