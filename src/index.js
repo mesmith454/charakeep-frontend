@@ -30,6 +30,13 @@
     .then(db => db.json())
     .then(character => console.log(character))
    } 
+
+   function getform() {  
+      fetch('http://localhost:3000/form.html', {method: 'GET'}) 
+      .then(db => db.json())
+      .then(form => console.log(form))
+   }
+
 //event listeners
   // addach.addEventListener("click", e => {
     // e.preventDefault()
@@ -49,12 +56,27 @@
   //   } 
   // }) this can wait
     
-  //addbtn.addEventListener("click", e => {
-    //render form.html
-    //input = []
-        //toggle form view, accept form input as array
+  // addbtn.addEventListener("click", e => {
+    // render form.html
+    // input = []
+    //     toggle form view, accept form input as array
+    
+  //   async function addChar(url = 'http://localhost:3000/characters', data = {}) {
+  //     method: 'POST',           //post submission to db
+  //     mode: 'cors',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     redirect: 'follow',
+  //     referrePolicy: 'no-referrer',
+  //     body: JSON.stringify(data);
+  //   }
+  // });
 
-    //async function addChar(url = 'http://localhost:3000/characters', data = {}) {
+  //editbtn.addEventListener("click", e => {
+    //render form.html
+    //getchara(); populate form with existing data
+    // async function editChar(url = 'http://localhost:3000/characters/:id', data = {}) {
       //method: 'POST',           //post submission to db
       //mode: 'cors',
       //headers: {
@@ -63,26 +85,22 @@
       //redirect: 'follow',
       //referrePolicy: 'no-referrer',
       //body: JSON.stringify(data);
-    //}
-  //});
+  //}
 
-   
-
-  //edit - on click > edit function
-    //render form.html
-  
-  //edit>update - on click > update function
-      //edit current character 
-      //record input to character
-      //fetch() return updated character
-
-  //delete - on click > delete function
-      //fetch character
-      //delete character from database
-      //if exist other characters display 1st
-      //else display form for new 
+  //delbtn.addEventListener("click", e => {
+    // chara = getchara();
+      // async function delChar(url = 'http://localhost:3000/characters/:id', data = {}) {
+      //method: 'DELETE',           //submit deletion
+      //mode: 'cors',
+      //headers: {
+        //'Content-Type': 'application/json'
+      //},
+      //redirect: 'follow',
+      //referrePolicy: 'no-referrer',
+      //body: JSON.stringify(data);
 
   //dieroller - on click 
+   //not a top priority
     //if id = d#; n = 
     //take input for amount
     // dn x amount
@@ -92,5 +110,5 @@
 
 
 //call functions
-getuser();
-// getallcharas();
+  getuser();
+  // getallcharas();
