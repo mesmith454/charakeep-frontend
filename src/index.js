@@ -6,18 +6,19 @@
     const image = document.querySelector("#profile")
     const addchieve = document.querySelector("#addchieve")
     const usern = document.querySelector("#usern")
+    const achul = document.querySelector("#achul")
+    const cname = document.querySelector("#cname")
   
-    const achul = document.querySelector("achul")
-
     let li = document.createElement("li")
 
 //stand alone functions
   function getuser(){
     fetch('http://localhost:3000/users/1', {method: 'GET'}) 
     .then(db => db.json())
-    .then(user => console.log(user))
+    .then(user => {console.log(user)
+    showChar(user)}
+    )
    } 
-   //populate with user and char data
 
   function getallcharas() {   
     fetch('http://localhost:3000/characters', {method: 'GET'}) 
@@ -25,17 +26,21 @@
     .then(character => console.log(character))
    } //this works yay!
 
-   function getchara() {   
-    fetch('http://localhost:3000/characters/:id', {method: 'GET'}) 
-    .then(db => db.json())
-    .then(character => console.log(character))
-   } 
+  function showChar(user) {
+    console.log(user)
+    let chara = user.characters[0]
+    console.log(chara)
+    cname.innerText = chara.name
+  }
+  
 
-   function getform() {  
-      fetch('http://localhost:3000/form.html', {method: 'GET'}) 
-      .then(db => db.json())
-      .then(form => console.log(form))
-   }
+  //  function getform() {  
+  //     fetch('http://localhost:3000/form.html', {method: 'GET'}) 
+  //     .then(db => db.json())
+  //     .then(form => console.log(form))
+  //  }
+
+
 
 //event listeners
   // addach.addEventListener("click", e => {
@@ -56,34 +61,33 @@
   //   } 
   // }) this can wait
     
-  // addbtn.addEventListener("click", e => {
-    // render form.html
-    // input = []
-    //     toggle form view, accept form input as array
-    
-  //   async function addChar(url = 'http://localhost:3000/characters', data = {}) {
-  //     method: 'POST',           //post submission to db
-  //     mode: 'cors',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     redirect: 'follow',
-  //     referrePolicy: 'no-referrer',
-  //     body: JSON.stringify(data);
-  //   }
-  // });
+  addbtn.addEventListener("click", e => {
+    window.location="form.html" //yes! view switches
+    // addbtn.addEventListener("click", e => {
+        //Character.create()
+
+    //   async function addChar(url = 'http://localhost:3000/characters', data = {}) {
+    //     method: 'POST',           //post submission to db
+    //     mode: 'cors',
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     redirect: 'follow',
+    //     referrerPolicy: 'no-referrer',
+    //     body: JSON.stringify(data);
+    //   }
+    // }
+  });
 
   //editbtn.addEventListener("click", e => {
     //render form.html
     //getchara(); populate form with existing data
-    // async function editChar(url = 'http://localhost:3000/characters/:id', data = {}) {
+    //function editChar(url = 'http://localhost:3000/characters/:id', data = {}) {
       //method: 'POST',           //post submission to db
-      //mode: 'cors',
       //headers: {
         //'Content-Type': 'application/json'
       //},
-      //redirect: 'follow',
-      //referrePolicy: 'no-referrer',
+      //referrerPolicy: 'no-referrer',
       //body: JSON.stringify(data);
   //}
 
@@ -96,7 +100,7 @@
         //'Content-Type': 'application/json'
       //},
       //redirect: 'follow',
-      //referrePolicy: 'no-referrer',
+      //referrerPolicy: 'no-referrer',
       //body: JSON.stringify(data);
 
   //dieroller - on click 
