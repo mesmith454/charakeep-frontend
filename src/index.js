@@ -1,7 +1,7 @@
 const newBtn = document.querySelector("#new-character > input[type=submit]:nth-child(18)")
 const charMenu = document.getElementById("char-menu")
 const charactersDiv = document.querySelector(".characters")
-let addChar = false
+let addChar = true
 const contDiv = document.querySelector(".container")
 
 const detImg = document.querySelector("img.detail-image")
@@ -20,9 +20,42 @@ newBtn.addEventListener('click', () => {
   addChar = !addChar;
   if (addChar) {
     contDiv.style.display = "block";
+    const newCharForm = document.getElementById("new-character")
   } else {
     contDiv.style.display = "none";
   }
+newCharForm.addEventListener('submit', eve=> {
+  eve.preventDefault()
+
+  let newChar = {
+    id: '',
+    name: eve.target.name.value,
+    race: eve.target.selectedIndex,
+    class: eve.target.selectedIndex,
+    image: eve.target.image.value,
+    description: eve.target.description.value,
+    stats: {
+
+    }
+  }
+
+  fetch('http://localhost:3000/characters', {
+      method: 'POST',
+      headers: {
+          'content-type': 'application/json',
+          'accept': 'application/json'
+      },
+      body: JSON.stringify(newChar)
+  })
+    .then(res => res.json())
+    .then(charObj => {
+      menuList(charObj)
+
+      commForm.reset()
+    })
+
+})
+  
 })
 
 fetch('http://localhost:3000/characters')
@@ -95,36 +128,4 @@ function detailCard(menuObj){
  
 }
 
-const newCharForm = document.getElementById("new-character")
 
-newCharForm.addEventListener('submit', eve=> {
-  eve.preventDefault()
-
-  let newChar = {
-    id: '',
-    name: eve.target.name.value,
-    race: eve.target.selectedIndex,
-    class: eve.target.selectedIndex,
-    image: eve.target.image.value,
-    description: eve.target.description.value,
-    stats: {
-
-    }
-}
-
-fetch('http://localhost:3000/characters', {
-    method: 'POST',
-    headers: {
-        'content-type': 'application/json',
-        'accept': 'application/json'
-    },
-    body: JSON.stringify(newChar)
-})
-.then(res => res.json())
-.then(charObj => {
-    menuList(charObj)
-
-    commForm.reset()
-})
-
-})
