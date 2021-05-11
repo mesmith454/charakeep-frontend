@@ -1,0 +1,160 @@
+/* * {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+  } */
+
+  html { 
+    background: url("assets/images/dndlogo.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+  }
+  
+  body {
+    padding: 1rem;
+    position: bottom;
+    text-align: center;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  header {
+    padding: 0.5rem;
+    width: 100%;
+    color: black;
+    /* background-color: transparent; */
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+  }
+  
+  .container {
+    margin-top:10px;
+    align-items: center;
+    text-align: center;
+    /* opacity: 0.7; */
+  }
+  
+
+  #char-menu {
+    display: flex;
+    overflow-x: auto;
+    margin: 0.5rem 0;
+    max-width: calc(100vw - 2rem);
+    /* opacity: 0.7; */
+    background-color: transparent;
+    text-align: center;
+    /* object-position: 100px 2000px; */
+  }
+  
+  #char-menu img {
+    flex: 0 1 auto;
+    height: 150px;
+    margin-right: 1rem;
+    justify-content: center;
+    cursor: pointer;
+    position: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #char-menu img:last-child {
+    right: 500px;
+  }
+  
+  #char-detail {
+    border: 30px red;
+    padding: 60px;
+    margin: 0px;
+    position: relative;
+    left: -50px;
+    box-sizing: border-box;
+  }
+
+  div.characters {
+    position: center;
+    border: 30px red;
+    height: 150px;
+    width: 300px;
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+    text-align: center;
+  }
+  
+  .detail-image {
+    /* float: left; */
+    height: 350px;
+    width: 330px;
+    
+  }
+
+  
+  
+  .description {
+    /* position: center; */
+    /* text-overflow: ellipsis; */
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+    width:500px;
+    font-style: italic;
+    font-size: 30px;
+    /* text-align: center; */
+    left: -50px;
+    
+  }
+ 
+  button {
+    position: relative;
+    background-color: #A9A9A9;
+    opacity: 0.7;
+    border: black;
+    border-radius: 5px;
+    height: 3rem;
+    width: max-content;
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+    font-size: 18px;
+    justify-self: center;
+  }
+
+  form {
+    margin: 1rem 0;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute; bottom: 0; left: 0;
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+    font-size: 18px;
+  }
+  
+  input,
+  textarea {
+    font-size: 1rem;
+    border: 1px solid black;
+    background-color: white;
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+    width: 100%;
+  }
+  
+  input[type="submit"] {
+    color: white;
+    border: 1px solid white;
+    background-color: black;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  input[type="submit"]:active {
+    background-color: gray;
+  }
+  .select{
+    font-size: 34px;
+    text-shadow: 3px 3px 6px rgba(214, 0, 0, 0.86);
+  }
+  
+ 
+  
